@@ -15,44 +15,46 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="main.css" />
     <title>Survey Form</title>
   </head>
 
   <body>
-    <!-- title -->
-    <div class="title">
-      <h2 class="font-weight-bold">
-        CSC 642 Summer 2020 Individual Assignment Momo Sun
-      </h2>
-      <h2 class="font-weight-bold">Data Survey Form</h2>
-    </div>
 
     <!-- form -->
+
     <div class="container">
+      <div class="title">
+        <h2 class="font-weight-bold">
+          "CSC 642 Summer 2020 Individual Assignment Basharat Anis"
+        </h2>
+        <h2 class="font-weight-bold">"Data Survey Form"</h2>
+      </div>
       <form id="dataForm" class="dataForm" action="result.html">
         <!--- Full Name -->
         <div class="form-group">
-          <label for=" exampleInputfullName" id="CustomID">Full Name</label>
+          <label for=" exampleInputfullName" id="CustomID">Full Name:</label>
           <input
             type="fullName"
             class="form-control"
             id="name"
             aria-describedby="fullNameHelp"
-            placeholder="Full Name"
+            placeholder="ex: David Pit"
             required
           />
         </div>
 
         <!--- Email -->
         <div class="form-group">
-          <label for="exampleInputEmail" id="CustomID">Email</label>
+          <label for="exampleInputEmail" id="CustomID">Email:</label>
           <input
             type="email"
             class="form-control"
             id="email"
-            placeholder="Email"
+            placeholder="example@email.com"
             onblur="checkName()"
             required
           />
@@ -60,12 +62,12 @@
 
         <!--- Confirm Email -->
         <div class="form-group">
-          <label for="exampleInputEmail1" id="CustomID">Confirm Email</label>
+          <label for="exampleInputEmail1" id="CustomID">Confirm Email:</label>
           <input
             type="email"
             class="form-control"
             id="confirmedEmail1"
-            placeholder="Confirm Email"
+            placeholder="example@email.com"
             onblur="confirmEmail()"
             required
           />
@@ -73,13 +75,13 @@
 
         <!--- Phone Number --->
         <div class="form-group">
-          <label for="phone" id="CustomID">Phone number</label>
+          <label for="phone" id="CustomID">Contact #</label>
           <input
             type="tel"
             id="phone"
             name="phone"
             class="form-control"
-            placeholder="123-456-7891"
+            placeholder="ex: (510)-557-7777"
             pattern="\d{3}[\-]\d{3}[\-]\d{4}"
             required
           />
@@ -103,11 +105,14 @@
           <label for="exampleFormControlSelect1">Education Level</label>
           <select class="form-control" id="education">
             <option> Degree </option>
+            <option> None </option>
             <option> High School </option>
+            <option> Some Certification </option>
             <option> Some College </option>
             <option> Bachelor </option>
             <option> Master </option>
             <option> Ph.D</option>
+            <option> Other </option>
           </select>
         </div>
 
@@ -141,7 +146,7 @@
                   class="form-control"
                   id="height-in"
                 >
-                  <option>in</option>
+                  <option>inches</option>
                   <option>1"</option>
                   <option>2"</option>
                   <option>3"</option>
@@ -161,7 +166,7 @@
 
         <!-- Adress-->
         <div class="form-group">
-          <label for="inputAddress">Address</label>
+          <label for="inputAddress">Address:</label>
           <input
             type="text"
             class="form-control"
@@ -173,7 +178,7 @@
 
         <div class="form-row">
           <div class="form-group col">
-            <label for="inputCity">City</label>
+            <label for="inputCity">City:</label>
             <input
               type="text"
               class="form-control"
@@ -182,7 +187,7 @@
             />
           </div>
           <div class="form-group col">
-            <label for="inputState">State</label>
+            <label for="inputState">State:</label>
             <input
               type="text"
               class="form-control"
@@ -191,7 +196,7 @@
             />
           </div>
           <div class="form-group col">
-            <label for="inputZip">Zip</label>
+            <label for="inputZip">Zip #</label>
             <input
               type="text"
               class="form-control"
@@ -211,14 +216,15 @@
             required
           />
           <label class="form-check-label" id="CustomID" sfor="exampleCheck1"
-            >I Agree to terms</label
+            >I Agree to terms and conditions</label
           >
         </div>
 
         <!-- reCaptcha -->
+
         <div class="form-group">
           <button
-            class="g-recaptcha"
+            class="g-recaptcha w3-btn w3-white w3-border w3-border-red w3-round-large"
             data-sitekey="6LeKXbIZAAAAAOWIdP6AT_ywKOw2h-vWjk5idWhR"
             data-callback="onSubmit"
             data-action="submit"
