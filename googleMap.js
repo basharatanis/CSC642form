@@ -3,7 +3,7 @@ function initAutocomplete() {
 
   if (localStorage.getItem("address") !== null) {
     let address = localStorage.getItem("address").split(",");
-    let stree = address[0];
+    let street = address[0];
     let city = address[1];
     let state = address[2];
     let zip = address[3];
