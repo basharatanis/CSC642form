@@ -7,7 +7,7 @@ function initAutocomplete() {
     let city = address[1];
     let state = address[2];
     let zip = address[3];
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${stree},+${city},+${state}&key=${apiKey}`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${street},+${city},+${state}&key=${apiKey}`;
 
     //fetch api
     fetch(url)
