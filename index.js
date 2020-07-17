@@ -6,21 +6,15 @@ let address = document.getElementById("address");
 let city = document.getElementById("city");
 let state = document.getElementById("state");
 let zip = document.getElementById("zip");
-
-// select
-
 let education = document.getElementById("education");
 let height_feet = document.getElementById("height-feet");
 let height_in = document.getElementById("height-in");
-
-//result
 
 let resultEducation = 0;
 
 let height_feet_result = 0;
 let height_in_result = 0;
 
-//check name validation
 function checkName() {
   var name = document.getElementById("name").value;
   if (
@@ -29,29 +23,29 @@ function checkName() {
     name == null ||
     !name.trim().length
   ) {
-    //prevent submit if fails
+ 
     alert("Name can not only be empty space or greater than 40 characters");
   }
 }
 
-// confirm email validation
+
 function confirmEmail() {
   var email = document.getElementById("email").value;
   var confemail = document.getElementById("confirmedEmail1").value;
   if (email != confemail) {
-    //prevent submit if fails
+
     alert("Email Not Matching!");
   }
 }
 
 function dataSave() {
-  //result page
+
   let result_name = document.getElementById("result_name");
   resultEducation = education[education.selectedIndex];
   height_feet_result = height_feet[height_feet.selectedIndex];
   height_in_result = height_in[height_in.selectedIndex];
 
-  //store * input
+
   if (
     name.value.length !== 0 &&
     email.value.length !== 0 &&
@@ -66,7 +60,6 @@ function dataSave() {
     localStorage.setItem("education", education.value);
   }
 
-  //store optional input height
   if (
     height_feet_result.value !== null &&
     height_in_result.value !== null &&
@@ -81,7 +74,6 @@ function dataSave() {
     localStorage.setItem("height", "None");
   }
 
-  //store optional input address
   if (
     address.value !== null &&
     address.value.length > 0 &&
